@@ -1,0 +1,61 @@
+body {
+    padding: 10px;
+    margin: 15px;
+    font-family: "Georgia",Times New Roman,Times,serif;
+    font-size: 18px;
+    line-height: 150%;
+    color: #333333;
+    background: wheat;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: center;
+}   
+
+
+h1 {
+    padding: 20px;
+    margin: 0;
+    font-size: 36px;
+    color: blue;
+}
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     
+}
+    
+
+
+h2 {
+    font-size: 26px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+h3 { 
+    font-size: 26px;
+    text-align: center;
+    padding: 5px;
+}
+
+h4 {
+    color: green;
+    font-size: 26px;
+    text-align: center;
+    padding: 5px;
+}
+
+h5 {
+    color: red;
+    font-size: 26px;
+    text-align: center;
+    padding: 5px;
+}
+h6 {
+    color: blue;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+}
