@@ -10,13 +10,27 @@
   var wins = 0;
   var losses = 0;
   var guessleft = 9; 
+  //Randomly chooses a choice from computerchoices
+  var computerGuess = randomLetter();
 //function is run when user presses key
+
+function randomLetter() {
+    return computerChoices[Math.floor(Math.random() * computerChoices.length)];
+}
+
+function resetGame() {
+    // Reset guessesLeft to 9
+    // Generate a new random computer letter
+    guessleft = 9;
+    computerGuess = randomLetter();
+}
+
 document.onkeyup = function(event) {
      
   
   //determins which key was pressed and makes all lower case for matching and to keep guess at letters only
   var userGuess = event.key.toLowerCase(); 
-  var pattern = /[a-z]/;
+  var pattern = /^[a-z]$/;
   var valid = userGuess.match(pattern);
   if (valid) {
       guessleft--;
@@ -27,24 +41,24 @@ document.onkeyup = function(event) {
       userGuess = "";
   }
   
-//Randomly chooses a choice from computerchoices
-  var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
      
 //to make variable calculations and reset when necessary
   if ((userGuess === computerGuess)) { 
       wins++;
+      resetGame();
   }  
   
   if ((guessleft === 0)) {
       losses++;
       letlength = [];
-      
+      resetGame();
   }
   
 
-  if ((guessleft === -1)) {
-      guessleft = 8;
-  }
+//   if ((guessleft === -1)) {
+//       guessleft = 8;
+//   }
 
 
 
